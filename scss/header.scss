@@ -1,0 +1,241 @@
+.header__top-info {
+    display: none;
+
+    @media screen and (min-width:768px) {
+        display: block;
+        margin: 0 auto;
+        width: 100vw;
+        background-color: #252B42;
+        font-size: 1rem;
+        font-weight: 700;
+
+        p {
+            font-size: 1rem;
+        }
+
+        &__wrapper {
+            display: flex;
+            margin: 9px 24px 0;
+            color: #fff;
+            justify-content: space-between;
+            align-items: center;
+            vertical-align: middle;
+            text-align: center;
+            height: 34px;
+            padding: 10px 0;
+
+        }
+
+        &_contacts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            img {
+                width: 12px;
+            }
+        }
+
+        &_tel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        &_email {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        &_social-networks {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            p {
+                display: block;
+            }
+        }
+    }
+   
+}
+
+.header {
+    width: 100vw;
+    margin: 0 auto;
+
+    &__wrapper {
+        margin: 35px 35px 15px 35px;
+    }
+
+    &__wrapper-desktop{
+        display: none;
+    }
+
+    &__logo-text {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.1px;
+        color: #252B42;
+    }
+
+
+
+    &__navigation {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 32px;
+        align-items: start;
+        margin-top: 4px;
+
+        &_holder {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &_menu {
+            display: block;
+            transition: margin-bottom 0.3s;
+            margin-top: 4px;
+        }
+
+        &_menu:hover {
+            margin-bottom: 463px;
+
+
+            +.header__navigation_wrapper {
+                display: flex;
+
+            }
+        }
+
+        &_wrapper {
+            display: none;
+            position: absolute;
+            top: 7%;
+            right: 0vw;
+            padding-top: 40px;
+            height: 363px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+
+            li a {
+                color: #737373;
+                font-size: 30px;
+                line-height: 45px;
+                letter-spacing: 0.2px;
+            }
+
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        &__wrapper {
+            display: none;
+        }
+
+        &__logo-text{
+            font-size: 2rem;
+        }
+
+        &__wrapper-desktop {
+            display: flex;
+            justify-content: space-between;
+            margin: 29px 24px 63px;
+        }
+
+        &__menu-left {
+            display: flex;
+            gap: 80px;
+            align-items: center;
+        }
+
+        &__navigation-desktop ul {
+            display: flex;
+            gap: 15px;
+
+            a {
+                color: $post-heading-gray;
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+        }
+
+        &__login-block{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            color: #23A6F0;
+
+            &_log-reg{
+                display: flex;
+                
+                gap: 5px;
+
+                a{
+                    color: #23A6F0;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+
+                span{
+                    
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
+
+            }
+
+            img{
+                width: 16px;
+            }
+        }
+    }
+
+    @media screen and (min-width:1440px) {
+        &__logo-text{
+            font-size: 2.4rem;
+        }
+
+        &__navigation-desktop ul {
+
+            a {
+                font-size: 1.4rem;
+            }
+        }
+
+        &__menu-left{
+            gap: 120px;
+        }
+
+        &__login-block{
+           
+            &_log-reg{
+               
+                a{
+                    font-size: 1.4rem;
+                }
+
+                span{                    
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    
+}
